@@ -91,7 +91,6 @@ bootJar {
     mainClass = 'com.tlc.test.Main'
 }
 
-// Docker configuration using jib
 jib {
     from {
         image = "registry.turacocloud.com/turaco-package/openjdk:17-alpine"
@@ -115,10 +114,6 @@ jib {
     container {
         volumes = ['/tmp', '/logs']
     }
-    container {
-        environment = [
-                'SPRING_PROFILES_ACTIVE': "${springProfile}"
-        ]
-        jvmFlags = ['-Xms512m', '-Xmx512m']
-    }
 }
+
+
