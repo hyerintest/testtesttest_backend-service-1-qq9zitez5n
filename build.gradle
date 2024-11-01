@@ -94,7 +94,7 @@ bootJar {
 // Docker configuration using jib
 jib {
     from {
-        image = "registry.turacocloud.com/turaco-package/openjdk:17-jdk-slim"
+        image = "registry.turacocloud.com/turaco-package/openjdk:17-alpine"
     }
     to {
         image = "${dockerRegistry}"
